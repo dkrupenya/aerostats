@@ -1,0 +1,21 @@
+{
+  "name": "aerostats",
+  "version": "0.0.1",
+  "description": "Монгольфьеркин project for EpicSkills",
+  "main": "gulp.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.7.13",
+    "gulp": "*",
+    "gulp-file-include": "^0.13.2",
+    "gulp-less": "^3.0.3",
+    "gulp-rigger": "^0.5.8",
+    "gulp-watch": "^4.2.4",
+    "rimraf": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitry Krupenya",
+  "license": "ISC"
+}
