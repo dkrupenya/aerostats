@@ -15,6 +15,9 @@ h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
 }
+h1, h2, h3 {
+  font-weight: normal;
+}
 
 .container {
   width: 1200px;
@@ -31,11 +34,10 @@ h1, h2, h3, p, ul, li {
 
   &__title {
     font-size: 22px;
-    font-weight: normal;
     color: #fff;
     width: 25%;
     float: left;
-    margin-left: -7px;
+    margin-left: -4px;
   }
   & nav {
     width: 75%;
@@ -43,8 +45,7 @@ h1, h2, h3, p, ul, li {
   }
   & ul {
     text-align: right;
-    margin-right: -6px;
-
+    margin-right: -10px;
   }
   & li {
     display: inline-block;
@@ -57,5 +58,45 @@ h1, h2, h3, p, ul, li {
   }
   &__nav-item--active {
     border: 1px solid #efefef;
+  }
+}
+
+/* Section First-Screen */
+.first-screen {
+  height: 645px;
+  background-image: url(../img/bg-first-screen.jpg);
+  background-size: cover;
+  text-align: center;
+  padding-top: 171px;
+  &__motto {
+    font-size: 66px;
+    line-height: 78px;
+    color: #fff;
+    width: 690px;
+    margin: 0 auto 181px;
+  }
+  &__more-info {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 7px 12px;
+    border: 1px solid #fff;
+  }
+  &__more-info:after {
+    content: '';
+    display: inline-block;
+    background-image: url(../img/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    height: 29px;
+    width: 18px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 74px;
   }
 }
