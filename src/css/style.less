@@ -6,6 +6,62 @@
 
 
 /* variables */
+@grid-gutter: 2.5; // in %, 30px at width 1200
+@grid-columns: 12;
+
+/* grid */
+.row {
+  padding-left: percentage(@grid-gutter/2);
+  padding-right: percentage(@grid-gutter/2);
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+
+/* Grid Mixins */
+.make-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) { // initial
+    @item: ~".col-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".col-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;   // from bootstrap. Why??? for pixel hunting, if necessary?
+      min-height: 1px;      // Prevent columns from collapsing when empty
+      float: left;
+      margin-left: percentage(@grid-gutter / 2);
+      margin-right: percentage(@grid-gutter / 2);
+    }
+  }
+  .col(1); // kickstart it
+}
+.calc-grid-column(@index) when (@index > 0) {
+  .col-@{index} {
+    width: percentage((@index / @grid-columns)-2*@grid-gutter);
+  }
+}
+.loop-grid-columns(@index) when (@index >= 0) {
+  .calc-grid-column(@index);
+  // next iteration
+  .loop-grid-columns((@index - 1));
+}
+.make-grid() {
+  .loop-grid-columns(@grid-columns);
+}
+
+/* run grid mixins */
+.make-grid-columns;
+.make-grid;
 
 /* General styles */
  body {
