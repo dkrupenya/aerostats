@@ -190,29 +190,27 @@ h1, h2, h3 {
 }
 
 /* Section shorts (Вкратце) */
+.h2() {
+  font-size: 32px;
+  padding-top: 36px;
+  padding-bottom: 16px;
+  margin-left: -4px;
+  margin-bottom: 43px;
+  background-image: url(../img/bg-blue-line.png);
+  background-size: 62px 6px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
 .shorts {
   & .container {
     .row;
-    height: 555px;
+    height: 560px;
     background-color: lightcyan;
   }
   &__intro {
     .col(4);
     & h2 {
-      font-size: 32px;
-      padding-top: 36px;
-      margin-left: -4px;
-      margin-bottom: 59px;
-      &:before {
-        content: '';
-        display: block;
-        background-color: #3e98d7;
-        width: 62px;
-        height: 6px;
-        position: absolute;
-        top: 91px;
-        left: -4px;
-      }
+      .h2();
     }
     & p {
        font-size: 18px;
@@ -238,3 +236,50 @@ h1, h2, h3 {
     margin: 0 auto;
   }
 }
+
+/* Section Gallery */
+.gallery {
+  & .container {
+    height: 450px;
+    text-align: center;
+    position: relative;
+  }
+  & h2 {
+    .h2();
+    background-position: 50% 100%;
+  }
+}
+.carousel {
+  width: 100%;
+  font-size: 0;
+  padding-top: 18px;
+  &__arrow-left {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 32px;
+    fill: #cfcfcf;
+    &:hover {
+      fill: #727272;
+    }
+  }
+  &__arrow-right {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 32px;
+    fill: #cfcfcf;
+    &:hover {
+      fill: #727272;
+    }
+  }
+  &__images {
+    display: inline-block;
+  }
+  &__img {
+    padding: 7px;
+    box-sizing: content-box;
+    &:hover {
+      fill: #727272;
+    }
+  }
+}
+
