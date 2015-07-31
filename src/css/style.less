@@ -129,7 +129,7 @@ h1, h2, h3 {
 /* Section perks */
 .perks .container {
   .row;
-  height: 169px;
+  height: 188px;
 }
 .perks__perk {
   .col(3);
@@ -187,4 +187,52 @@ h1, h2, h3 {
       left: 10px;
     }
   }
+}
+
+/* Section shorts (Вкратце) */
+.shorts .container {
+  .row;
+  height: 555px;
+  background-color: lightcyan;
+}
+.shorts__intro {
+  .col(4);
+  & h2 {
+    font-size: 32px;
+    padding-top: 36px;
+    margin-left: -4px;
+    margin-bottom: 59px;
+    &:before {
+      content: '';
+      display: block;
+      background-color: #3e98d7;
+      width: 62px;
+      height: 6px;
+      position: absolute;
+      top: 91px;
+      left: -4px;
+    }
+  }
+  & p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: -5px;
+    margin-bottom: 24px;
+  }
+}
+.shorts__video {
+  .col(8);
+  padding-top: 49px;
+  margin-bottom: 110px;
+
+}
+.shorts__video-container {
+  box-shadow: 0 20px 0 -10px #e6e6e6 ;
+}
+.shorts hr {
+  height: 1px;
+  width: 98%;
+  background-color: #ccc;
+  border: none;
+  margin: 0 auto;
 }
