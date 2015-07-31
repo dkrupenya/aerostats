@@ -23,7 +23,7 @@
   clear: both;
 }
 .col(@index) {
-    width: percentage((@index / @grid-columns)) - 2 * @grid-gutter;
+    width: percentage((@index / @grid-columns)) - @grid-gutter;
     position: relative;   // from bootstrap. Why??? for pixel hunting, if necessary?
     min-height: 1px;      // Prevent columns from collapsing when empty
     float: left;
@@ -34,6 +34,8 @@
 /* General styles */
  body {
    font-family: "Roboto", sans-serif;
+   height: 5988px; //TO DO Delete this
+   width: 1600px;
 }
 h1, h2, h3, p, ul, li {
   margin: 0;
@@ -131,7 +133,58 @@ h1, h2, h3 {
 }
 .perks__perk {
   .col(3);
-  padding-left: 60px;
-  padding-top: 95px;
+  @pt: 94px;
+  padding-top: @pt;
   font-size: 18px;
+  line-height: 22px;
+  &:before {
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    position: absolute;
+
+  }
+  &--1 {
+    padding-left: 83px;
+    &:before {
+      background-image: url(../img/icon-thumbup.svg);
+      width: 56px;
+      height: 58px;
+      top: @pt - 10;
+      left: 5px;
+    }
+  }
+  &--2 {
+    padding-left: 90px;
+    &:before {
+      background-image: url(../img/icon-glasses.svg);
+      width: 75px;
+      height: 28px;
+      top: @pt + 10;
+      left: -6px;
+    }
+  }
+  &--3 {
+    padding-left: 104px;
+    padding-right: 50px;
+    &:before {
+      background-image: url(../img/icon-photo.svg);
+      width: 65px;
+      height: 50px;
+      top: @pt - 5;
+      left: 14px;
+    }
+  }
+  &--4 {
+    padding-left: 108px;
+    &:before {
+      background-image: url(../img/icon-binocular.svg);
+      width: 72px;
+      height: 34px;
+      top: @pt + 5;
+      left: 10px;
+    }
+  }
 }
