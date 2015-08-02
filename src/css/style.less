@@ -59,6 +59,7 @@ hr {
 /* General style mixins */
 .h2() {
   font-size: 32px;
+  font-weight: 500;
   padding-top: 36px;
   padding-bottom: 16px;
   margin-bottom: 43px;
@@ -587,13 +588,14 @@ hr {
   & .container {
     .row;
     text-align: center;
-    height: 535px;
+    height: 525px;
     padding-top: 48px;
   }
   & h2 {
     .h2();
     background-position: 50% 100%;
-    margin-bottom: 70px;
+    padding-bottom: 26px;
+    margin-bottom: 60px;
   }
   &__info {
     .col(3);
@@ -611,5 +613,38 @@ hr {
     font-size: 18px;
   }
 
+}
+/* section Opinions */
+.opinions {
+  .container {
+    .row;
+    text-align: center;
+    height: 515px;
+  }
+  & h2 {
+    .h2();
+    background-position: 50% 100%;
+    padding-bottom: 26px;
+    margin-bottom: 50px;
+  }
+  &__opinion {
+    .col(6);
+
+  }
+  & img {
+    margin-bottom: 6px;
+  }
+  & cite {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    font-style: normal;
+    margin-bottom: 14px;
+  }
+  & blockquote {
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
