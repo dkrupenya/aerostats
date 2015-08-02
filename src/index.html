@@ -102,18 +102,19 @@
             </div>
             <div class="price__form">
                 <form class="price-form" action="">
-                    <label class="price-form__label" for="">Маршрут полета:</label>
-                    <input class="price-form__input" type="text"/>
-                    <label class="price-form__label" for="">Имя и фамилия:</label>
-                    <input class="price-form__input" type="text"/>
-                    <label class="price-form__label" for="">Количество человек:</label>
-                    <input class="price-form__input" type="text"/>
-                    <label class="price-form__label" for="">Телефон:</label>
-                    <input class="price-form__input" type="text"/>
-                    Стоимость:
-                    <button>Полетели!</button>
+                    <label class="price-form__label" for="path">Маршрут полета:</label>
+                    <input class="price-form__input price-form__input--path" id="path" type="text" name="path" value="Сестрорецк – Парнас"/>
+                    <label class="price-form__label" for="num-of-passengers">Количество человек:</label>
+                    <input class="price-form__input price-form__input--num-of-passengers" id="num-of-passengers" type="text" name="num-of-passengers" value="2"/>
+                    <label class="price-form__label" for="name">Имя и фамилия:</label>
+                    <input class="price-form__input price-form__input--name" id="name" type="text" name="name"/>
+                    <label class="price-form__label" for="phone">Телефон:</label>
+                    <input class="price-form__input price-form__input--phone" id="phone" type="text" name="phone"/>
+                    <p>Стоимость:<span>9000 Р</span></p>
+                    <input class="price-form__btn" id="submit" type="submit" name="submit" value="Полетели!"/>
                 </form>
             </div>
+            <hr/>
         </div>
     </section>
 
