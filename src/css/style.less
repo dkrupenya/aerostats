@@ -647,4 +647,100 @@ hr {
     margin-right: 0;
   }
 }
+/* Contacts section */
+.contacts {
+  background-image: url(../img/bg-adress.jpg);
+  background-size: 100%;
+  .container {
+    .row;
+    height: 448px;
+    text-align: center;
+    font-weight: 500;
+  }
+  &__write {
+    font-size: 26px;
+    color: #444444;
+    margin-top: 55px;
+    margin-bottom: 4px;
+    &:before {
+      content: "";
+      display: block;
+      width: 62px;
+      height: 62px;
+      background: url(../img/icon-airplane.svg) no-repeat;
+      background-size: 42px;
+      background-position: 50% 50%;
+      background-color: #337ba0;
+      border-radius: 5px;
+      margin: 0 auto 20px;
+    }
+  }
+  &__airport {
+    font-size: 18px;
+    color: #616161;
+    margin-bottom: 54px;
+  }
+  &__offices {
+    .col(4);
+    text-align: left;
+
+  }
+  &__title {
+    color: #2b2b2b;
+    font-size: 22px;
+    padding-left: 60px;
+    position: relative;
+    margin-bottom: 4px;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 35px;
+      height: 50px;
+      background: url(../img/icon-location.svg) no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+    }
+  }
+  &__address, &__working-hours {
+    color: #525252;
+    font-size: 20px;
+    padding-left: 60px;
+  }
+  &__phone {
+    color: #292929;
+    font-size: 26px;
+    padding-left: 60px;
+    margin-top: 6px;
+  }
+  &__email {
+    font-size: 22px;
+    color: #444;
+    text-decoration: underline;
+    padding-left: 10px;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 23px;
+      height: 17px;
+      background: url(../img/icon-email.svg) no-repeat;
+      background-size: 100%;
+      margin-right: 22px;
+    }
+  }
+  &__social {
+    margin-top: 20px;
+    padding-left: 10px;
+    & a {
+      font-family: "WebSymbolsLigaRegular", serif;
+      font-size: 22px;
+      color: #444;
+      padding-right: 18px;
+      &:hover {
+        color: #778189;
+      }
+    }
+  }
+}
 
