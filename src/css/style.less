@@ -96,15 +96,21 @@ hr {
   }
   & li {
     display: inline-block;
-    padding: 4px 6px 3px 9px;
-    margin-left: 12px;
+    vertical-align: middle;
+    padding: 4px 9px 4px 9px;
+    margin-left: 9px;
+    &:hover {
+      border: 1px solid #efefef;
+      padding: 3px 8px 3px 8px; // this fixes menu jittering on hovering over
+    }
   }
   & li a {
     font-size: 18px;
     color: #fff;
-  }
-  &__nav-item--active {
-    border: 1px solid #efefef;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }
 
@@ -130,6 +136,10 @@ hr {
     font-size: 18px;
     padding: 7px 12px;
     border: 1px solid #fff;
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
   }
   &__more-info:after {
     content: '';
