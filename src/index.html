@@ -104,13 +104,28 @@
             <div class="price__form">
                 <form class="price-form" action="">
                     <label class="price-form__label" for="path">Маршрут полета:</label>
-                    <input class="price-form__input price-form__input--path" id="path" type="text" name="path" value="Сестрорецк – Парнас"/>
+                        <select class="price-form__input price-form__input--path"
+                                id="path" name="path">
+                            <option>Сестрорецк – Парнас</option>
+                            <option>Сестрорецк – Лисий-Нос</option>
+                            <option>Сестрорецк – Барнаул</option>
+                        </select>
                     <label class="price-form__label" for="num-of-passengers">Количество человек:</label>
-                    <input class="price-form__input price-form__input--num-of-passengers" id="num-of-passengers" type="text" name="num-of-passengers" value="2"/>
-                    <label class="price-form__label" for="name">Имя и фамилия:</label>
-                    <input class="price-form__input price-form__input--name" id="name" type="text" name="name"/>
+                        <select class="price-form__input price-form__input--path"
+                                id="num-of-passengers" name="num-of-passengers">
+                            <option>1</option>
+                            <option selected>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                    <label class="price-form__label" for="name">Имя и фамилия: </label>
+                        <input class="price-form__input price-form__input--name"
+                               id="name" type="text" name="name"/>
                     <label class="price-form__label" for="phone">Телефон:</label>
-                    <input class="price-form__input price-form__input--phone" id="phone" type="text" name="phone"/>
+                        <input class="price-form__input price-form__input--phone"
+                               id="phone" type="text" name="phone"/>
                     <p>Стоимость:<span>9000 Р</span></p>
                     <input class="price-form__btn" id="submit" type="submit" name="submit" value="Полетели!"/>
                 </form>

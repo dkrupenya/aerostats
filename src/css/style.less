@@ -431,16 +431,16 @@ hr {
   padding-top: 37px;
 
   &__label {
-    font-size: 18px;
     display: inline-block;
-    width: 200px;
+    font-size: 18px;
+    width: 35%;
     padding-left: 2px;
     line-height: 60px;
   }
   &__input {
     font-size: 18px;
     display: inline-block;
-    width: 355px;
+    width: 65%;
     padding-top: 4px;
     padding-bottom: 8px;
     border: 1px solid #d5d5d5;
@@ -453,6 +453,16 @@ hr {
     &--num-of-passengers {
       padding-left:12px;
       background: url(../img/icon-form-arrows.png) no-repeat scroll 330px 6px;
+      // hack to remove standard  select arrow
+      // http://stackoverflow.com/questions/16603979/select-removing-dropdown-arrow
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      &::-ms-expand { // end in IE, too
+        display: none;
+      }
+      // end of hack
     }
     &--name {
       background: url(../img/icon-form-man.svg) no-repeat scroll 10px 10px;
@@ -462,6 +472,10 @@ hr {
       background: url(../img/icon-form-phone.svg) no-repeat scroll 8px 8px;
       padding-left:30px;
       margin-bottom: 30px;
+      &:active, &:focus {
+        border: 2px solid #aed6ff;
+        margin-bottom: 29px; // fix against jitter
+      }
     }
   }
   & p {
